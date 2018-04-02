@@ -8,5 +8,6 @@ Pre requisite:
 Run the following command
 
 ```
-wget https://raw.githubusercontent.com/e-sean/webmin/master/webmin.sh & sudo bash webmin.sh
+wget https://raw.githubusercontent.com/e-sean/webmin/master/webmin.sh 
+sudo bash webmin.sh
 ```
