@@ -63,14 +63,14 @@ rm -rf webmin_tmp
 stop_spinner $?
 
 ##Finale##
-OS=`uname`
-IO="" # store IP
-case $OS in
-   Linux) IP=`ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}'`;;
-   *) IP="Unknown";;
-esac
+##OS=`uname`
+#IO="" # store IP
+#case $OS in
+#   Linux) IP=`ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}'`;;
+#   *) IP="Unknown";;
+#esac
 
-echo "-Webmin install complete. You can now login to https://$IP:10000/ as root with your root password, or as any user who can use sudo to run commands as root."
+echo "-Webmin install complete. You can now login to https://YOUR-IP:10000/ as root with your root password, or as any user who can use sudo to run commands as root."
 
 
 
