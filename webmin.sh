@@ -20,7 +20,7 @@ cd webmin_tmp
 
 sudo apt-get update -y  > /dev/null
 sudo apt-get install wget -y > /dev/null
-wget https://raw.githubusercontent.com/e-sean/deluge/master/spinner.sh > /dev/null
+wget https://raw.githubusercontent.com/e-sean/webmin/master/spinner.sh > /dev/null
 
 source "$(pwd)/spinner.sh"
 
