@@ -29,21 +29,21 @@ sudo apt-get wget net-tools install perl libnet-ssleay-perl openssl libauthen-pa
 stop_spinner $?
 
 start_spinner 'Fetching latest Webmin'
-wget -q --show-progress https://prdownloads.sourceforge.net/webadmin/webmin_1.881_all.deb
+wget -q --show-progress http://www.webmin.com/download/deb/webmin-current.deb
 stop_spinner $?
 
 ##adding keys##
 start_spinner 'Adding PGP keys'
 wget -q --show-progress http://www.webmin.com/jcameron-key.asc
 apt-key add jcameron-key.asc
-rm -rf jcameron*
+rm jcameron-key.asc*
 stop_spinner $?
 
 
 ##Installing webmin##
 start_spinner 'Installing Webmin'
-dpkg --install webmin_1.881_all.deb > /dev/null
-rm -rf webmin_1.881_all.deb
+dpkg --install webmin-current.deb > /dev/null
+rm webmin-current.deb
 stop_spinner $?
 
 start_spinner 'Starting services'
