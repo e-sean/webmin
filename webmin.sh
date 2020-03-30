@@ -18,15 +18,14 @@ any_key "Press any key to start the script..."
 mkdir webmin_tmp
 cd webmin_tmp
 
-sudo apt-get update -y  > /dev/null
-sudo apt-get install wget -y > /dev/null
 wget -q --show-progress https://raw.githubusercontent.com/e-sean/webmin/master/spinner.sh
 
 source "$(pwd)/spinner.sh"
 
 
 start_spinner 'Pulling dependencies'
-sudo apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python apt-transport-https -y > /dev/null
+sudo apt-get update -y  > /dev/null
+sudo apt-get wget net-tools install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python apt-transport-https -y > /dev/null
 stop_spinner $?
 
 start_spinner 'Fetching latest Webmin'
