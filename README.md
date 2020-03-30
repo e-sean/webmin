@@ -1,13 +1,12 @@
-# Webmin 1.881
-A script to install Webmin on Ubuntu Server 16.04
-
-Pre requisite:
-* wget
+# Webmin Panel
+A script to install Webmin on Ubuntu Server 16.xx, 18.xx, 19.xx
 
 
-Run the following command
 
+## Installation
 ```
 wget https://raw.githubusercontent.com/e-sean/webmin/master/webmin.sh 
-sudo bash webmin.sh
+cd webmin
+chmod +x webmin.sh
+./webmin.sh
 ```
