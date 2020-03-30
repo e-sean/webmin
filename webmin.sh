@@ -26,7 +26,7 @@ source "$(pwd)/spinner.sh"
 
 
 start_spinner 'Pulling dependencies'
-sudo apt install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python apt-transport-https -y > /dev/null
+sudo apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python apt-transport-https -y > /dev/null
 stop_spinner $?
 
 start_spinner 'Fetching latest Webmin'
