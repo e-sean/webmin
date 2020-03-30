@@ -20,7 +20,7 @@ cd webmin_tmp
 
 sudo apt-get update -y  > /dev/null
 sudo apt-get install wget -y > /dev/null
-wget https://raw.githubusercontent.com/e-sean/webmin/master/spinner.sh > /dev/null
+wget -q --show-progress https://raw.githubusercontent.com/e-sean/webmin/master/spinner.sh
 
 source "$(pwd)/spinner.sh"
 
@@ -30,12 +30,12 @@ sudo apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-r
 stop_spinner $?
 
 start_spinner 'Fetching latest Webmin'
-wget https://prdownloads.sourceforge.net/webadmin/webmin_1.881_all.deb
+wget -q --show-progress https://prdownloads.sourceforge.net/webadmin/webmin_1.881_all.deb
 stop_spinner $?
 
 ##adding keys##
 start_spinner 'Adding PGP keys'
-wget http://www.webmin.com/jcameron-key.asc
+wget -q --show-progress http://www.webmin.com/jcameron-key.asc
 apt-key add jcameron-key.asc
 rm -rf jcameron*
 stop_spinner $?
